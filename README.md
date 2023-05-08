@@ -14,3 +14,14 @@ git restore --staged <文件名> # 将已add但未commit的文件撤回到未add
 git reset --soft (commitID || HEAD~1) # 回退commit
 
 ```
+
+# Git 常用组合
+
+1. 在之前某次 commit 追加提交。
+
+```sh
+git checkout  <commitID> # 切换至对应commit，添加修改并commit
+git branch <新分支名> <detached-id> # 基于分离头id创建新分支
+git switch <分支名> # 切换到主分支
+git merge <新分支名> # 将基于分离头id创建的新分支合并到当前分支
+```
